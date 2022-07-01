@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// Network error with two cases
 enum NetworkError: Error {
     
     case badURL

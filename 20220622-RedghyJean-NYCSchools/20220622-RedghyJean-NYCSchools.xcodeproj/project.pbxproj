@@ -116,12 +116,14 @@
 			isa = PBXGroup;
 			children = (
 				02EC49C5286495F200648655 /* Info.plist */,
+				02EC4A022864D81400648655 /* Main.storyboard */,
+				02EC49C2286495F200648655 /* LaunchScreen.storyboard */,
 				02EC49EA2864964B00648655 /* Services */,
 				02EC49E92864963700648655 /* ViewModel */,
 				02EC49E82864962A00648655 /* View */,
 				02EC49E72864961A00648655 /* Model */,
 				02EC4A052864D8BC00648655 /* Delegates */,
-				02EC4A062864D8EE00648655 /* StoryBoard & Assets */,
+				02EC4A062864D8EE00648655 /* Assets */,
 			);
 			path = "20220622-RedghyJean-NYCSchools";
 			sourceTree = "<group>";
@@ -189,14 +191,12 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
-		02EC4A062864D8EE00648655 /* StoryBoard & Assets */ = {
+		02EC4A062864D8EE00648655 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				02EC4A022864D81400648655 /* Main.storyboard */,
-				02EC49C2286495F200648655 /* LaunchScreen.storyboard */,
 				02EC49C0286495F200648655 /* Assets.xcassets */,
 			);
-			path = "StoryBoard & Assets";
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

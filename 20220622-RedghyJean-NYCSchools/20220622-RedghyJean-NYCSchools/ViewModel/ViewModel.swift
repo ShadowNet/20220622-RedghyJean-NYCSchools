@@ -42,7 +42,9 @@ class ViewModel: ViewModelControllerProtocal {
     private func createData(url: String? ) {
         networkManager?.getData(urlString: url){ schoolData in
             if let response = schoolData.0 {
-                self.responseData = response
+                self.responseData = response.sorted(by: { lhs, rhs in
+                    return (lhs.schoolName ?? "") < (rhs.schoolName ?? "")
+                })
                 DispatchQueue.main.async {
                     self.loadData?.dataFinished()
                 }
@@ -70,6 +72,10 @@ class ViewModel: ViewModelControllerProtocal {
     
     func getReadingScore() -> String {
         responseData.first?.reading ?? "N/A"
+    }
+    
+    var readingScore: String {
+        return responseData.first?.reading ?? "N/A"
     }
     
     func getMathScore() -> String {

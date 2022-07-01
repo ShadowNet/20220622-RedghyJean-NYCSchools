@@ -23,3 +23,5 @@ struct ResponseModel: Codable {
         case writing = "sat_writing_avg_score" 
     }
 }
+
+

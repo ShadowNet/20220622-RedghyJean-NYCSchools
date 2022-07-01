@@ -14,7 +14,7 @@ class SchoolDetailView: UIViewController {
     var detail = [ResponseModel]()
     let network = ViewModel()
     // UILabel inherits the UIView class
-    private var name: UILabel = {
+    private lazy var name: UILabel = {
         let name = UILabel(frame: .zero)
         name.translatesAutoresizingMaskIntoConstraints = false
         name.text = ""
@@ -23,7 +23,7 @@ class SchoolDetailView: UIViewController {
         return name
     }()
     
-    private var math: UILabel = {
+    private lazy var math: UILabel = {
         let name = UILabel(frame: .zero)
         name.translatesAutoresizingMaskIntoConstraints = false
         name.text = "Math:      "
@@ -31,7 +31,7 @@ class SchoolDetailView: UIViewController {
         return name
     }()
     
-    private var reading: UILabel = {
+    private lazy var reading: UILabel = {
         let name = UILabel(frame: .zero)
         name.translatesAutoresizingMaskIntoConstraints = false
         name.text = "Reading: "
@@ -39,7 +39,7 @@ class SchoolDetailView: UIViewController {
         return name
     }()
     
-    private var writing: UILabel = {
+    private lazy var writing: UILabel = {
         let name = UILabel(frame: .zero)
         name.translatesAutoresizingMaskIntoConstraints = false
         name.text = "Writing:  "
@@ -104,7 +104,8 @@ extension SchoolDetailView: NetworkDelegate {
 
     func dataFinished() {
 
-        reading.text = reading.text?.appending(network.getReadingScore())
+//        reading.text = reading.text?.appending(network.getReadingScore())
+        reading.text = reading.text?.appending(network.readingScore)
         math.text = math.text?.appending(network.getMathScore())
         writing.text = writing.text?.appending(network.getWritingScore())
 
